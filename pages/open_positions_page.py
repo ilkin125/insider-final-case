@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from .base_page import BasePage
 
+
 class OpenPositionsPage(BasePage):
     # Locators
     LOCATION_DROPDOWN_BUTTON = (By.CSS_SELECTOR, ".select2-selection--single")
@@ -73,8 +74,7 @@ class OpenPositionsPage(BasePage):
             view_role_button = first_job_listing.find_element(By.LINK_TEXT, "View Role")
             view_role_button.click()
             print("Clicked 'View Role' link.")
-            time.sleep(15)
+            time.sleep(10)
             return True
         except Exception:
             return False
-

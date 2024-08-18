@@ -11,15 +11,7 @@ class CareersPage(BasePage):
     LIFE_AT_INSIDER_SECTION = (By.CSS_SELECTOR, "[data-id='a8e7b90']")
     SEE_ALL_TEAMS_LINK = (By.XPATH, "//a[text()='See all teams']")
     JOB_ITEM = (By.LINK_TEXT, "Quality Assurance")
-    JOB_TITLE = (By.CSS_SELECTOR, ".job-title")
     SHOW_POSITIONS = (By.LINK_TEXT, "See all QA jobs")
-    LOCATION_DROPDOWN_BUTTON = (By.CSS_SELECTOR, ".select2-selection--single")
-    ISTANBUL_TURKEY_OPTION = (By.XPATH, "//li[contains(text(), 'Istanbul, Turkey')]")
-    QA_TEXT_CONTAINER = (By.ID, "select2-filter-by-department-container")
-    JOB_LISTINGS = (By.CSS_SELECTOR, ".position-list-item")
-    JOB_DEPARTMENT = (By.CSS_SELECTOR, ".position-department")
-    JOB_LOCATION = (By.CSS_SELECTOR, ".position-location")
-    VIEW_ROLE_BUTTON = (By.CSS_SELECTOR, ".btn.btn-navy.rounded.pt-2.pr-5.pb-2.pl-5")
 
     def verify_sections(self):
         locations_present = self.is_visible(self.LOCATIONS_SECTION)
